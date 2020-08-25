@@ -1,0 +1,44 @@
+{
+   "name": "abc-payment-service",
+   "version": "0.0.1",
+   "description": "",
+   "devDependencies": {
+      "@types/chai": "^4.1.7",
+      "@types/mocha": "^5.2.5",
+      "@types/node": "^8.0.29",
+      "@types/sinon": "^7.0.12",
+      "@typescript-eslint/eslint-plugin": "^2.16.0",
+      "@typescript-eslint/parser": "^2.16.0",
+      "chai": "^4.2.0",
+      "eslint": "^6.8.0",
+      "eslint-plugin-spellcheck": "0.0.14",
+      "mocha": "^5.2.0",
+      "mysql": "^2.17.1",
+      "sinon": "^7.3.2",
+      "ts-node": "^8.1.0",
+      "typescript": "^3.4.5"
+   },
+   "dependencies": {
+      "@infoloop-opensource/abstractions": "^0.1.7",
+      "@infoloop-opensource/common-utils": "0.0.3",
+      "@infoloop-opensource/typeorm-hacks": "git+https://github.com/infoloop-opensource/typeorm-hacks.git",
+      "common": "git+ssh://git@git.qingniu.co:pangu/common.git",
+      "common-utils": "git+ssh://git@git.qingniu.co:infoloop/common-utils.git",
+      "typeorm": "^0.2.22",
+      "uuid": "^7.0.1"
+   },
+   "files": [
+      "dist"
+   ],
+   "main": "dist/cjs/index.js",
+   "module": "dist/es2015/index.js",
+   "types": "dist/cjs/index.d.ts",
+   "scripts": {
+      "lint": "eslint ./src --fix --ext .ts",
+      "build": "rm -rf dist && npm run build:es2015 && npm run build:cjs",
+      "build:es2015": "tsc --declaration --skipLibCheck --module es2015 --target es2015 --outDir dist/es2015",
+      "build:cjs": "tsc --declaration --skipLibCheck --module commonjs --target es5 --outDir dist/cjs",
+      "generate": "ts-node tools/JsonGenerator",
+      "test": "mocha -r ts-node/register --timeout 50000 --exit src/**/*.test.ts"
+   }
+}
