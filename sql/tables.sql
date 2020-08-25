@@ -20,7 +20,7 @@ CREATE TABLE `abc_order_records` (
   INDEX (subjectId, orderId),
   INDEX (subjectId, orderId, orderCode),
   INDEX (subjectId, abcTranNo)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'abc market 支付跳转记录';
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'abc 支付跳转记录';
 
 CREATE TABLE `abc_account_records` (
   id                        INT             NOT NULL AUTO_INCREMENT,
@@ -38,4 +38,4 @@ CREATE TABLE `abc_account_records` (
   comment                   VARCHAR(100)    NOT NULL,
   PRIMARY KEY (id),
   INDEX (subjectId)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'abc market 商户信息表';
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT 'abc 商户信息表';

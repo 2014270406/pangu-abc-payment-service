@@ -23,7 +23,7 @@ export class AbcPaymentServices {
         }));
         this.context = context;
     }
-    initialize(masterConnection, replicationConnection, abcAccountRecordUpdateHook, abcRuleRecordUpdateHook, abcOrderRecordUpdateHook) {
+    initialize(masterConnection, replicationConnection, abcAccountRecordUpdateHook, abcOrderRecordUpdateHook) {
         return __awaiter(this, void 0, void 0, function* () {
             this._abcAccountRecordService = new AbcAccountRecordService(this.AbcAccountRecordEx, masterConnection, replicationConnection, abcAccountRecordUpdateHook);
             this._abcOrderRecordService = new AbcOrderRecordService(this.AbcOrderRecordEx, masterConnection, replicationConnection, abcOrderRecordUpdateHook);

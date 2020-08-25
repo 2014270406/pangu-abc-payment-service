@@ -52,7 +52,7 @@ var AbcPaymentServices = /** @class */ (function () {
         }));
         this.context = context;
     }
-    AbcPaymentServices.prototype.initialize = function (masterConnection, replicationConnection, abcAccountRecordUpdateHook, abcRuleRecordUpdateHook, abcOrderRecordUpdateHook) {
+    AbcPaymentServices.prototype.initialize = function (masterConnection, replicationConnection, abcAccountRecordUpdateHook, abcOrderRecordUpdateHook) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 this._abcAccountRecordService = new AbcAccountRecordService_1.AbcAccountRecordService(this.AbcAccountRecordEx, masterConnection, replicationConnection, abcAccountRecordUpdateHook);
