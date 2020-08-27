@@ -102,7 +102,7 @@ var AbcAccountRecordDAO = /** @class */ (function () {
                     whereSQL = whereSQL.concat(" AND subjectId = " + subjectId);
                 }
                 if (dealerIds) {
-                    whereSQL = whereSQL.concat(" AND dealerId in (" + dealerIds.join(',') + ") ");
+                    whereSQL = whereSQL.concat(" AND dealerId in (" + dealerIds.map(function (m) { return "'" + m + "'"; }).join(',') + ") ");
                 }
                 if (name !== undefined) {
                     whereSQL = whereSQL.concat(" AND name = '" + name + "'");

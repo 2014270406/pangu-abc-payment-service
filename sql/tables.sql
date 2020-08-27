@@ -25,7 +25,7 @@ CREATE TABLE `abc_order_records` (
 CREATE TABLE `abc_account_records` (
   id                        INT             NOT NULL AUTO_INCREMENT,
   subjectId                 INT             NOT NULL,
-  dealerId                  INT             NOT NULL,
+  dealerId                  VARCHAR(50)     NOT NULL,
   code                      VARCHAR(50)     NOT NULL,
   name                      VARCHAR(50)     NOT NULL,
   mobile                    VARCHAR(50)     NOT NULL,  

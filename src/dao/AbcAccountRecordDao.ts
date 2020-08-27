@@ -77,7 +77,7 @@ export class AbcAccountRecordDAO {
             whereSQL = whereSQL.concat(` AND subjectId = ${subjectId}`);
         }
         if (dealerIds) {
-            whereSQL = whereSQL.concat(` AND dealerId in (${dealerIds.join(',')}) `);
+            whereSQL = whereSQL.concat(` AND dealerId in (${dealerIds.map(m => "'" + m + "'").join(',')}) `);
         }
         if (name !== undefined) {
             whereSQL = whereSQL.concat(` AND name = '${name}'`);
@@ -102,7 +102,7 @@ export class AbcAccountRecordDAO {
     }
 
     public async createAccountRecord(subjectId: number,
-                                     dealerId: number,
+                                     dealerId: string,
                                      name: string,
                                      code: string,
                                      mobile: string,
@@ -135,7 +135,7 @@ export class AbcAccountRecordDAO {
 
     public async updateAccountRecordById(subjectId: number | undefined,
                                          id: number,
-                                         dealerId: number | undefined,
+                                         dealerId: string | undefined,
                                          name: string | undefined,
                                          code: string | undefined,
                                          mobile: string | undefined,

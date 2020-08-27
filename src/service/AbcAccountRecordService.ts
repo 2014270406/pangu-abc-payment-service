@@ -67,7 +67,7 @@ export class AbcAccountRecordService {
     }
 
     public async createAccountRecord(subjectId: number,
-                                     dealerId: number,
+                                     dealerId: string,
                                      name: string,
                                      code: string,
                                      mobile: string,
@@ -84,7 +84,7 @@ export class AbcAccountRecordService {
 
     public async updateAccountRecordById(subjectId: number | undefined,
                                          id: number,
-                                         dealerId: number | undefined,
+                                         dealerId: string | undefined,
                                          name: string | undefined,
                                          code: string | undefined,
                                          mobile: string | undefined,

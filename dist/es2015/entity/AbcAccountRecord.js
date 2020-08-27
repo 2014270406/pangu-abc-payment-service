@@ -20,7 +20,7 @@ __decorate([
 ], AbcAccountRecord.prototype, "subjectId", void 0);
 __decorate([
     Column(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], AbcAccountRecord.prototype, "dealerId", void 0);
 __decorate([
     Column(),

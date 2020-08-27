@@ -1,7 +1,7 @@
 export declare class AbcAccountRecord {
     id: number;
     subjectId: number;
-    dealerId: number;
+    dealerId: string;
     code: string;
     name: string;
     mobile: string;

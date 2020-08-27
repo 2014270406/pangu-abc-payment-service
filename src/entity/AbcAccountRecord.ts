@@ -8,7 +8,7 @@ export class AbcAccountRecord {
     subjectId: number;
 
     @Column()
-    dealerId: number;
+    dealerId: string;
 
     @Column()
     code: string;
