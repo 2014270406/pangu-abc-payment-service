@@ -54,6 +54,10 @@ __decorate([
 __decorate([
     Column(),
     __metadata("design:type", Number)
+], AbcOrderRecord.prototype, "company", void 0);
+__decorate([
+    Column(),
+    __metadata("design:type", Number)
 ], AbcOrderRecord.prototype, "supplierId", void 0);
 __decorate([
     Column(),

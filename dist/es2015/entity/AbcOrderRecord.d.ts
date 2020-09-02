@@ -15,6 +15,7 @@ export declare class AbcOrderRecord {
     abcTranNo: string;
     abcMeta: string;
     payStatus: AbcPayStatus;
+    company: number;
     supplierId: number;
     amount: number;
     createdAt: Date;

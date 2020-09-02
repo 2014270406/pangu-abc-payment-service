@@ -16,7 +16,7 @@ export declare class AbcOrderRecordService {
     getRecordsByIds(subjectId: number | undefined, ids: number[], context: Context, connectionType?: ConnectionType): Promise<AbcOrderRecord[]>;
     getRecordsBySubjectId(subjectId: number, context: Context, connectionType?: ConnectionType): Promise<AbcOrderRecord[]>;
     getRecordsByCondition(subjectId: number | undefined, orderIds: number[] | undefined, orderCode: string | undefined, abcTranNos: string[] | undefined, payStatus: AbcPayStatus | undefined, recordAtLowerBound: Date | undefined, recordAtUpperBound: Date | undefined, timezone: number, includedDeleted: boolean, context: Context, connectionType?: ConnectionType): Promise<AbcOrderRecord[]>;
-    createOrderRecord(subjectId: number, orderId: number, orderCode: string, transactionNo: string, abcTranNo: string, abcMeta: string, payStatus: AbcPayStatus, supplierId: number, amount: number, creator: number, context: Context): Promise<AbcOrderRecord>;
+    createOrderRecord(subjectId: number, orderId: number, orderCode: string, transactionNo: string, abcTranNo: string, abcMeta: string, payStatus: AbcPayStatus, company: number, supplierId: number, amount: number, creator: number, context: Context): Promise<AbcOrderRecord>;
     updateOrderRecordById(subjectId: number | undefined, id: number, payStatus: AbcPayStatus | undefined, amount: number | undefined, updater: number, context: Context): Promise<void>;
     deleteRecordsByIds(subjectId: number | undefined, ids: number[] | undefined, deleter: number, context: Context): Promise<void>;
 }

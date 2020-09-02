@@ -49,10 +49,10 @@ export class AbcOrderRecordService {
             return this.AbcOrderRecordDAO.getRecordsByCondition(subjectId, orderIds, orderCode, abcTranNos, payStatus, recordAtLowerBound, recordAtUpperBound, timezone, entityManager, context, includedDeleted);
         });
     }
-    createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, context) {
+    createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, context) {
         return __awaiter(this, void 0, void 0, function* () {
             const entityManager = this.switchConnection('master');
-            const record = yield this.AbcOrderRecordDAO.createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, entityManager, context);
+            const record = yield this.AbcOrderRecordDAO.createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, entityManager, context);
             if (this.recordUpdateHook) {
                 this.recordUpdateHook([record.id]);
             }

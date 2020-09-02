@@ -132,6 +132,7 @@ export class AbcOrderRecordDAO {
                                    abcTranNo: string,
                                    abcMeta: string,
                                    payStatus: AbcPayStatus,
+                                   company: number,
                                    supplierId: number,
                                    amount: number,
                                    creator: number,
@@ -146,6 +147,7 @@ export class AbcOrderRecordDAO {
             record.abcTranNo = abcTranNo;
             record.abcMeta = abcMeta;
             record.payStatus = payStatus;
+            record.company = company;
             record.supplierId = supplierId;
             record.amount = amount;
             record.createdBy = creator;

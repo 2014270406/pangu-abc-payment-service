@@ -8,6 +8,7 @@ CREATE TABLE `abc_order_records` (
   abcTranNo                 VARCHAR(100)    NOT NULL,
   abcMeta                   TEXT            NOT NULL,
   payStatus                 INT             NOT NULL COMMENT '0待支付,1成功,2失败,3全部退款,4部分退款,5失效',
+  company                   INT             NOT NULL,
   supplierId                INT             NOT NULL,
   amount                    INT             NOT NULL,
   createdBy                 INT             NOT NULL,

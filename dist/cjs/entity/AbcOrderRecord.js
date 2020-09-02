@@ -57,6 +57,10 @@ var AbcOrderRecord = /** @class */ (function () {
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", Number)
+    ], AbcOrderRecord.prototype, "company", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", Number)
     ], AbcOrderRecord.prototype, "supplierId", void 0);
     __decorate([
         typeorm_1.Column(),

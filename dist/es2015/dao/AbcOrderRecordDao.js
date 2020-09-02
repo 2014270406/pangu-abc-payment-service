@@ -110,7 +110,7 @@ export class AbcOrderRecordDAO {
             return queryBuilder.getMany();
         });
     }
-    createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, entityManager, context) {
+    createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, entityManager, context) {
         return __awaiter(this, void 0, void 0, function* () {
             const systemTime = new Date();
             const record = new AbcOrderRecord();
@@ -121,6 +121,7 @@ export class AbcOrderRecordDAO {
             record.abcTranNo = abcTranNo;
             record.abcMeta = abcMeta;
             record.payStatus = payStatus;
+            record.company = company;
             record.supplierId = supplierId;
             record.amount = amount;
             record.createdBy = creator;

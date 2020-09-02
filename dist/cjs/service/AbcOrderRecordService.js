@@ -109,14 +109,14 @@ var AbcOrderRecordService = /** @class */ (function () {
             });
         });
     };
-    AbcOrderRecordService.prototype.createOrderRecord = function (subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, context) {
+    AbcOrderRecordService.prototype.createOrderRecord = function (subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, context) {
         return __awaiter(this, void 0, void 0, function () {
             var entityManager, record;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         entityManager = this.switchConnection('master');
-                        return [4 /*yield*/, this.AbcOrderRecordDAO.createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, entityManager, context)];
+                        return [4 /*yield*/, this.AbcOrderRecordDAO.createOrderRecord(subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, entityManager, context)];
                     case 1:
                         record = _a.sent();
                         if (this.recordUpdateHook) {

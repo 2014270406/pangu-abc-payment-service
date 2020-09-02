@@ -154,7 +154,7 @@ var AbcOrderRecordDAO = /** @class */ (function () {
             });
         });
     };
-    AbcOrderRecordDAO.prototype.createOrderRecord = function (subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, supplierId, amount, creator, entityManager, context) {
+    AbcOrderRecordDAO.prototype.createOrderRecord = function (subjectId, orderId, orderCode, transactionNo, abcTranNo, abcMeta, payStatus, company, supplierId, amount, creator, entityManager, context) {
         return __awaiter(this, void 0, void 0, function () {
             var systemTime, record, queryBuilder, result;
             return __generator(this, function (_a) {
@@ -169,6 +169,7 @@ var AbcOrderRecordDAO = /** @class */ (function () {
                         record.abcTranNo = abcTranNo;
                         record.abcMeta = abcMeta;
                         record.payStatus = payStatus;
+                        record.company = company;
                         record.supplierId = supplierId;
                         record.amount = amount;
                         record.createdBy = creator;

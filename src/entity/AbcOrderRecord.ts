@@ -35,6 +35,9 @@ export class AbcOrderRecord {
     payStatus: AbcPayStatus;
 
     @Column()
+    company: number;
+
+    @Column()
     supplierId: number;
 
     @Column()
